@@ -33,7 +33,8 @@ app.use('/api/venues', require('./routes/venueRoutes'));
 app.use('/api/inquiries', require('./routes/inquiryRoutes'));
 app.use('/api/settings', require('./routes/settingsRoutes'));
 app.use('/api/gallery', require('./routes/galleryRoutes'));
-// app.use('/api/bookings', require('./routes/bookingRoutes'));
+app.use('/api/bookings', require('./routes/bookingRoutes'));
+app.use('/api/inventory', require('./routes/inventoryRoutes'));
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {

@@ -16,6 +16,8 @@ A comprehensive, full-stack Event Management System with a premium Admin Panel a
     - **Events:** CRUD for different event types with pricing tiers.
     - **Services:** Manage service offerings (DJ, Catering, Decor) with icons.
     - **Venues:** Manage luxury farm houses and locations with capacity details.
+    - **Inventory:** Manage stock for tentage (Chairs, Tents, Sofa Sets, etc.).
+    - **Bookings:** Create reservations with auto-allocation of inventory and support for **custom outside locations**.
     - **Gallery:** Upload images directly or use custom URLs.
     - **Settings:** Update site branding, contact info, and SEO meta tags.
 - **Authentication:** Secure JWT-based admin login.

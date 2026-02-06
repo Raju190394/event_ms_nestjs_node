@@ -6,7 +6,7 @@ echo #          EVENT MANAGEMENT SYSTEM SETUP         #
 echo ##################################################
 echo.
 
-:: Check for node_modules in server to see if npm is available
+:: Check for Node.js
 node -v >nul 2>&1
 if %errorlevel% neq 0 (
     echo [ERROR] Node.js is not installed. Please install Node.js first.
@@ -52,16 +52,21 @@ cd server
 :: Check if .env exists
 if not exist .env (
     echo [WARNING] .env file not found in server folder!
-    echo Please create it based on .env.example with your DB_PASSWORD.
-    echo DB Setup might fail...
+    echo Creating a default .env file...
+    copy .env.example .env
+    echo [ACTION] Please open server/.env and update DB_PASSWORD immediately.
 )
+
 call node setupDb.js
 if %errorlevel% neq 0 (
     echo [ERROR] Database setup failed. Check your DB credentials in server/.env.
+) else (
+    echo [SUCCESS] Database and Inventory tables ready.
 )
 cd ..
 
-echo [5/5] Creating Uploads Directory...
+echo [5/5] Finalizing Directories...
+if not exist server\uploads mkdir server\uploads
 if not exist server\uploads\gallery mkdir server\uploads\gallery
 
 echo.
@@ -69,9 +74,17 @@ echo ##################################################
 echo #         SETUP COMPLETED SUCCESSFULLY          #
 echo ##################################################
 echo.
-echo To start the project, run 'npm run dev' in server, admin, and client folders.
+echo 🏃 STEPS TO RUN:
+echo 1. Open 3 Terminals
+echo 2. Terminal 1: cd server ^&^& npm run dev
+echo 3. Terminal 2: cd admin ^&^& npm run dev
+echo 4. Terminal 3: cd client ^&^& npm run dev
 echo.
-echo Admin Login: admin / password123
+echo 🔐 CREDENTIALS:
+echo Admin Login: admin@vrikshansh.com
+echo Password: password123
+echo.
+echo 🌐 LINKS:
 echo Website: http://localhost:3000
 echo Admin: http://localhost:3001
 echo.
