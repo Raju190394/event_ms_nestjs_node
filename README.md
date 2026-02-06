@@ -92,4 +92,4 @@ The project is pre-configured to use **Indian Rupees (₹)** for all pricing and
 ---
 
 ## 📝 License
-This project is developed for Vrikshansh Technology.
+This project is developed for Vrikshansh Technology (Romanchal Nayak).
