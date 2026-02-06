@@ -1,8 +1,8 @@
-# Event Management System 🎊
+# Event Management System 
 
 A comprehensive, full-stack Event Management System with a premium Admin Panel and a dynamic User Website. Built with Node.js, Express, Next.js, and MySQL.
 
-## 🚀 Features
+##  Features
 
 ### 👤 User Website
 - **Dynamic Content:** Home page, Events, Services, and Venues are all fetched live from the database.
@@ -10,7 +10,7 @@ A comprehensive, full-stack Event Management System with a premium Admin Panel a
 - **Responsive:** Works perfectly on Desktop, Tablet, and Mobile.
 - **Gallery:** Pinterest-style dynamic gallery with lightbox preview.
 
-### 🛠️ Admin Panel
+###  Admin Panel
 - **Dashboard:** Overview of system stats and revenue.
 - **Module Management:**
     - **Events:** CRUD for different event types with pricing tiers.
